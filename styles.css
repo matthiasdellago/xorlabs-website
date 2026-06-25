@@ -30,26 +30,32 @@ body {
 /* Masthead */
 .mast { margin-bottom: 3.5rem; }
 
+.brand {
+  display: inline-block;
+  text-align: center;
+  vertical-align: baseline;
+}
+
 .logo {
   display: block;
-  width: 84px;
+  width: 108px;
   height: auto;
   color: var(--ink);
-  margin-bottom: 1.6rem;
+  margin: 0 auto 0.9rem;
 }
 
 h1 {
   font-size: 1.55rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  margin: 0 0 1.1rem;
+  margin: 0;
 }
 
 .mission {
+  display: inline;
   font-size: 1.18rem;
   line-height: 1.55;
   margin: 0;
-  max-width: 36rem;
 }
 
 /* Sections */
