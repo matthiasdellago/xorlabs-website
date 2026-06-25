@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 64" role="img" aria-label="XOR Labs">
+  <path fill="#181818" fill-rule="evenodd"
+        d="M8 32 a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0
+           M32 32 a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0" />
+</svg>
