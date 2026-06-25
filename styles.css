@@ -102,6 +102,17 @@ h2 {
   text-align: center;
   gap: 0.5rem;
 }
+.people li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+.people li a:hover img {
+  opacity: 0.85;
+}
 .people img {
   width: 96px;
   height: 96px;
@@ -110,7 +121,6 @@ h2 {
   background: #ededed;
 }
 .people .name { font-size: 1rem; line-height: 1.3; }
-.people .role { font-size: 0.82rem; color: var(--muted); }
 
 /* Footer */
 footer {
