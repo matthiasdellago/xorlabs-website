@@ -163,14 +163,11 @@ h2 {
 /* Tabs */
 .tabs {
   display: flex;
+  flex-wrap: wrap;
   border-bottom: 1px solid var(--rule);
   margin: 2rem 0 2.5rem;
   gap: 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
 }
-.tabs::-webkit-scrollbar { display: none; }
 
 .tab {
   background: none;
@@ -184,8 +181,6 @@ h2 {
   font-weight: 500;
   color: var(--muted);
   transition: color 0.12s;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .tab.active {
