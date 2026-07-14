@@ -203,6 +203,12 @@ h2 {
   gap: 0.35rem 1rem;
   font-size: 1rem;
 }
+.collaborators a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+.collaborators a:hover { border-bottom-color: var(--ink); }
 
 /* Research */
 .research-intro { margin-bottom: 0.5rem; }
