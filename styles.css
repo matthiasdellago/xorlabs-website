@@ -318,8 +318,19 @@ footer {
   font-size: 0.95rem;
   color: var(--muted);
 }
-footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
-footer a:hover { border-bottom-color: var(--ink); }
+footer { text-align: center; }
+footer p { margin: 0; }
+footer p + p { margin-top: 0.35rem; }
+footer a { color: inherit; text-decoration: none; }
+footer a:hover { color: var(--ink); }
+.footer-mark {
+  width: 30px;
+  height: auto;
+  color: var(--rule);
+  margin: 0 auto 1rem;
+  display: block;
+}
+.footer-contact { font-size: 0.85rem; }
 
 @media (max-width: 480px) {
   body { font-size: 18px; }
