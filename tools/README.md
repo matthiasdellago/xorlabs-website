@@ -30,6 +30,9 @@ What has worked, per publisher:
   to a PDF (below). For Royal Society titles the PMC mirror is fetchable and its HTML
   lists the figure files as `.../<article>-g1.jpg`, but those are small (~700 px wide),
   so a PDF render is usually better.
+- **OpenReview** — workshop and conference papers that never reached arXiv live only here,
+  and every endpoint (`/pdf`, `/attachment`, `api2`) answers a bot challenge, so no header
+  set gets through. Open the PDF in a real browser and save it by hand.
 - **PDF fallback** — the arXiv version. Find it via the API, e.g.
   `curl -sL --data-urlencode 'search_query=ti:"<title>"' -G http://export.arxiv.org/api/query`,
   then `curl -sL https://arxiv.org/pdf/<id> -o paper.pdf`. Vector figures render at
@@ -124,6 +127,12 @@ Two practical consequences:
 - **Check the labels survive.** A square-ish figure ends up under 300 px wide, so axis
   text set for a journal column can end up too small. If it does, crop tighter — that
   raises the aspect ratio, which buys back width.
+- **A stacked two-panel figure can be re-laid-out side by side.** Crop each panel, then
+  paste them into one transparent canvas with a gap of about 5% of the height. Keep the
+  panels at their *native* relative scale and centre the shorter one vertically; scaling
+  both to a common height makes whichever panel is shortest balloon and dominate. This is
+  what *Inferring entropy production* does — its Fig. 2 is 0.9:1 stacked, 3.0:1 side by
+  side. Only rearrange panels, never redraw them.
 
 Source pixel dimensions are unrelated to any of this; they only set resolution, and the
 2000–2800 px target above still stands.
